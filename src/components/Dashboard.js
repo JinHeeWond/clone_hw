@@ -110,15 +110,16 @@ const Dashboard = () => {
       <i class="fa fa-dashboard"></i>
         My Dashboard</h2>
       <CardContainer>
-        <Card bg="red">
-          <i className="fa fa-comment w3-xxxlarge"></i> <i className="w3-xlarge"> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 52</i> 
+        <Card className="w3-red">
+          <i className="fa fa-comment w3-xxxlarge "></i> <i className="w3-xlarge "> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 52</i> 
           <br/><br/><br/><h4 className="w3-xlarge">Messages</h4> 
+          
         </Card>
-        <Card bg="blue">
+        <Card className="w3-blue">
           <i className="fa fa-eye w3-xxxlarge"></i> <i className="w3-xlarge">  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 99</i>
           <br/><br/><br/><h4 className="w3-xlarge">Views</h4> 
         </Card>
-        <Card bg="green">
+        <Card className="w3-teal">
           <i className="fa fa-share-alt  w3-xxxlarge"></i> <i className="w3-xlarge"> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;23</i>
           <br/><br/><br/><h4 className="w3-xlarge">Shares</h4> 
         </Card>
