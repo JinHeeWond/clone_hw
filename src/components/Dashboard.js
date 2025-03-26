@@ -48,16 +48,9 @@ const Feeds = styled.div`
     background-color: white;
     width: 100%;
     border-radius: 4px;
-    overflow: hidden;
+    table-layout: auto;
   }
 
-  td {
-    vertical-align: middle;
-  }
-
-  i {
-    margin-right: 8px;
-  }
 `;
 
 const Img = styled.div`
@@ -168,15 +161,15 @@ const Dashboard = () => {
       <tbody>
         <tr>
           <td><i className="fa fa-user text-primary fa-2x"></i> New record, over 90 views.</td>
-          <td><i>10 mins</i></td>
+          <td>10 mins</td>
         </tr>
         <tr>
           <td><i className="fa fa-bell text-danger fa-2x"></i> Database error.</td>
-          <td><i>15 mins</i></td>
+          <td>15 mins</td>
         </tr>
         <tr>
           <td><i className="fa fa-users text-warning fa-2x"></i> New record, over 40 users.</td>
-          <td><i>17 mins</i></td>
+          <td>17 mins</td>
         </tr>
         <tr>
           <td><i className="fa fa-comment text-danger fa-2x"></i> New comments.</td>
