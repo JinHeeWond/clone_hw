@@ -77,12 +77,13 @@ const JohnContents = styled.div`
     flex-direction:row;
 `;
 
-const greyContainer = styled.div`
+const GreyContainer = styled.div`
   background:"w3-dark-grey";
   width:100%;
-  height:272px;
+  display: flex;
+  gap: 90px;
   @media (max-width: 639px) {
-    height:613px;
+    flex-direction: column;
   }
 `;
 const Dashboard = () => {
@@ -213,13 +214,11 @@ const Dashboard = () => {
 
     <br/>
     <div className="w3-large">New Users</div>
-    
-    
     <div className="progress" style={{ height: '40px', backgroundColor: '#ccc' }}>
     <div 
       className="progress-bar bg-warning text-dar"
       role="progressbar"
-      style={{ width: '50%', color:'black' }}
+      style={{ width: '50%', color:'black'}}
       >
       50%
       </div>
@@ -310,27 +309,58 @@ const Dashboard = () => {
             </h4>
         </JohnContents>
         <div class="w3-container w3-dark-grey w3-padding-32">
-    <greyContainer>
-      <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-green">Demographic</h5>
+    <GreyContainer>
+      <div>
+      <h5
+        className="w3-border-green"
+        style={{
+        display: "inline-block",
+        borderBottom: "4px solid #4CAF50",
+        width: "450px",
+        paddingBottom: "5px"
+      }}
+      >
+      Demographic
+      </h5>
         <p>Language</p>
         <p>Country</p>
         <p>City</p>
       </div>
-      <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-red">System</h5>
+      <div>
+        
+      <h5
+        className="w3-border-red"
+        style={{
+        display: "inline-block",
+        borderBottom: "4px solid #f44336", 
+        width: "450px",
+        paddingBottom: "5px"
+      }}
+    >
+      System
+      </h5>
         <p>Browser</p>
         <p>OS</p>
         <p>More</p>
       </div>
-      <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-orange">Target</h5>
+      <div>
+      <h5
+        className="w3-border-orange"
+        style={{
+        display: "inline-block",
+        borderBottom: "4px solid #ff9800", 
+        width: "450px",
+        paddingBottom: "5px"
+        }}
+    >
+      Target
+    </h5>
         <p>Users</p>
         <p>Active</p>
         <p>Geo</p>
         <p>Interests</p>
       </div>
-    </greyContainer>
+    </GreyContainer>
   </div>
   <footer class="w3-container w3-padding-16 w3-light-grey">
     <h4>FOOTER</h4>
