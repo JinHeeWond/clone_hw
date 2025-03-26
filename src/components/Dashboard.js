@@ -214,7 +214,7 @@ const Dashboard = () => {
       aria-valuemin="0" 
       aria-valuemax="100"
      >
-    25%
+    +25%
   </div>
 </div>
 
@@ -226,7 +226,7 @@ const Dashboard = () => {
     <div 
       className="progress-bar bg-warning text-dar"
       role="progressbar"
-      style={{ width: '50%' }}
+      style={{ width: '50%', color:'black' }}
       >
       50%
       </div>
@@ -240,10 +240,7 @@ const Dashboard = () => {
           role="progressbar"
           style={{ width: '75%' }}
           >75%</div>
-      </div>
-        
-    
-    
+      </div> 
     <br/><br/>
     <div className="w3-xlarge">Countries</div>
     <table class="table table-striped table-hover">
