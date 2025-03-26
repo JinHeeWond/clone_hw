@@ -124,9 +124,10 @@ const Dashboard = () => {
     </nav>
     
     <Container>
-      <h2>
+      <b>
+      <br/>
       <i class="fa fa-dashboard"></i>
-        My Dashboard</h2>
+        My Dashboard</b>
       <CardContainer>
         <Card className="w3-red">
           <i className="fa fa-comment w3-xxxlarge "></i> <i className="w3-xlarge "> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 52</i> 
@@ -158,34 +159,34 @@ const Dashboard = () => {
     </Regions>
     
     <Feeds>
-    <table className="table table-striped table-hover">
+    <table className="table table-striped "  style={{ height: "400px" }}>
       <tbody>
         <tr>
-          <td><i className="fa fa-user text-primary fa-2x"></i> New record, over 90 views.</td>
+          <td><i className="fa fa-user w3-text-blue w3-large"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;New record, over 90 views.</td>
           <td>10 mins</td>
         </tr>
         <tr>
-          <td><i className="fa fa-bell text-danger fa-2x"></i> Database error.</td>
+          <td><i className="fa fa-bell w3-text-red w3-large"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Database error.</td>
           <td>15 mins</td>
         </tr>
         <tr>
-          <td><i className="fa fa-users text-warning fa-2x"></i> New record, over 40 users.</td>
+          <td><i class="fa fa-users w3-text-yellow w3-large"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;New record, over 40 users.</td>
           <td>17 mins</td>
         </tr>
         <tr>
-          <td><i className="fa fa-comment text-danger fa-2x"></i> New comments.</td>
+          <td><i class="fa fa-comment w3-text-red w3-large"></i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; New comments.</td>
           <td><i>25 mins</i></td>
         </tr>
         <tr>
-          <td><i className="fa fa-bookmark text-primary fa-2x"></i> Check transactions.</td>
+          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Check transactions.</td>
           <td><i>28 mins</i></td>
         </tr>
         <tr>
-          <td><i className="fa fa-laptop text-danger fa-2x"></i> CPU overload.</td>
+          <td><i class="fa fa-laptop w3-text-red w3-large"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;CPU overload.</td>
           <td><i>35 mins</i></td>
         </tr>
         <tr>
-          <td><i className="fa fa-share-alt text-success fa-2x"></i> New shares.</td>
+          <td><i class="fa fa-share-alt w3-text-green w3-large"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;New shares.</td>
           <td><i>39 mins</i></td>
         </tr>
       </tbody>
