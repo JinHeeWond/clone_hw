@@ -48,7 +48,7 @@ const Feeds = styled.div`
     background-color: white;
     width: 100%;
     border-radius: 4px;
-    table-layout: auto;
+    table-layout: fixed;
   }
 
 `;
