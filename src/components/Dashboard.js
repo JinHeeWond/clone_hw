@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Container = styled.div`
   width:100vw;
@@ -34,26 +35,40 @@ const Card = styled.div`
 const Regions = styled.div`
 `;
 const Feeds = styled.div`
-    margin-left:30px;
-    width:52%;
+  flex: 1;
+  min-width: 300px;
+  margin-left: 30px;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  table {
+    background-color: white;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  td {
+    vertical-align: middle;
+  }
+
+  i {
+    margin-right: 8px;
+  }
 `;
 
 const Img = styled.div`
-    display:flex;
-    flex-direction:row;
+     display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
     `;
 
-const Visitors = styled.div`
-    width:25%
-    `;
-
-const Users = styled.div`
-    width:50%
-    `;
-
-const Bounce = styled.div`
-    width:75%
-    `;
 
 const Whitebox = styled.div`
     background:white;
@@ -67,6 +82,15 @@ const John = styled.div`
 const JohnContents = styled.div`
     display:flex;
     flex-direction:row;
+`;
+
+const greyContainer = styled.div`
+  background:"w3-dark-grey";
+  width:100%;
+  height:272px;
+  @media (max-width: 639px) {
+    height:613px;
+  }
 `;
 const Dashboard = () => {
   return (
@@ -111,25 +135,25 @@ const Dashboard = () => {
         My Dashboard</h2>
       <CardContainer>
         <Card className="w3-red">
-          <i className="fa fa-comment w3-xxxlarge "></i> <i className="w3-xlarge "> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 52</i> 
+          <i className="fa fa-comment w3-xxxlarge "></i> <i className="w3-xlarge "> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 52</i> 
           <br/><br/><br/><h4 className="w3-xlarge">Messages</h4> 
           
         </Card>
         <Card className="w3-blue">
-          <i className="fa fa-eye w3-xxxlarge"></i> <i className="w3-xlarge">  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 99</i>
+          <i className="fa fa-eye w3-xxxlarge"></i> <i className="w3-xlarge">  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 99</i>
           <br/><br/><br/><h4 className="w3-xlarge">Views</h4> 
         </Card>
         <Card className="w3-teal">
-          <i className="fa fa-share-alt  w3-xxxlarge"></i> <i className="w3-xlarge"> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;23</i>
+          <i className="fa fa-share-alt  w3-xxxlarge"></i> <i className="w3-xlarge"> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 23</i>
           <br/><br/><br/><h4 className="w3-xlarge">Shares</h4> 
         </Card>
         <Card bg="orange">
-          <i className="fa fa-users w3-xxxlarge"></i> <i className="w3-xlarge">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 50</i>
+          <i className="fa fa-users w3-xxxlarge"></i> <i className="w3-xlarge">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  50</i>
           <br/><br/><br/><h4 className="w3-xlarge">Users</h4> 
         </Card>
       </CardContainer>
       <br/>
-      <div className="w3-xlarge">Regions  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Feeds</div>
+      <div className="w3-xlarge">Regions  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Feeds</div>
       <Img>
       <Regions>
       <img
@@ -140,132 +164,124 @@ const Dashboard = () => {
     </Regions>
     
     <Feeds>
-    <table class="w3-table w3-striped w3-white"> 
-        <tbody>
-            <tr>
-                <td>
-                <i class="fa fa-user w3-text-blue w3-xxlarge"></i>
-                &nbsp; &nbsp; &nbsp; &nbsp; New record, over 90 views. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                </td>
-                <td>
-                    <i>10 mins</i>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <i class="fa fa-bell w3-text-red w3-xxlarge"></i>
-                &nbsp; &nbsp; &nbsp; &nbsp;  Database error.
-                </td>
-                <td>
-                    <i>15 mins</i>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <i class="fa fa-users w3-text-yellow w3-xxlarge"></i>
-                &nbsp; &nbsp; &nbsp; &nbsp;  New record, over 40 users.
-                </td>
-                <td>
-                    <i>17 mins</i>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <i class="fa fa-comment w3-text-red w3-xxlarge"></i>
-                &nbsp; &nbsp; &nbsp; &nbsp;  New comments.
-                </td>
-                <td>
-                    <i>25 mins</i>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <i class="fa fa-bookmark w3-text-blue w3-xxlarge"></i>
-                &nbsp; &nbsp; &nbsp; &nbsp;  Check transactions.
-                </td>
-                <td>
-                    <i>28 mins</i>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <i class="fa fa-laptop w3-text-red w3-xxlarge"></i>
-                &nbsp; &nbsp; &nbsp; &nbsp;  CPU overload.
-                </td>
-                <td>
-                    <i>35 mins</i>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <i class="fa fa-share-alt w3-text-green w3-xxlarge"></i>
-                &nbsp; &nbsp; &nbsp; &nbsp;  New shares.
-                </td>
-                <td>
-                    <i>39 mins</i>
-                </td>
-            </tr>
-        </tbody>
+    <table className="table table-striped table-hover">
+      <tbody>
+        <tr>
+          <td><i className="fa fa-user text-primary fa-2x"></i> New record, over 90 views.</td>
+          <td><i>10 mins</i></td>
+        </tr>
+        <tr>
+          <td><i className="fa fa-bell text-danger fa-2x"></i> Database error.</td>
+          <td><i>15 mins</i></td>
+        </tr>
+        <tr>
+          <td><i className="fa fa-users text-warning fa-2x"></i> New record, over 40 users.</td>
+          <td><i>17 mins</i></td>
+        </tr>
+        <tr>
+          <td><i className="fa fa-comment text-danger fa-2x"></i> New comments.</td>
+          <td><i>25 mins</i></td>
+        </tr>
+        <tr>
+          <td><i className="fa fa-bookmark text-primary fa-2x"></i> Check transactions.</td>
+          <td><i>28 mins</i></td>
+        </tr>
+        <tr>
+          <td><i className="fa fa-laptop text-danger fa-2x"></i> CPU overload.</td>
+          <td><i>35 mins</i></td>
+        </tr>
+        <tr>
+          <td><i className="fa fa-share-alt text-success fa-2x"></i> New shares.</td>
+          <td><i>39 mins</i></td>
+        </tr>
+      </tbody>
     </table>
-    </Feeds>
+  </Feeds>
     </Img>
     <br/><br/>
     <div className="w3-xlarge">General Stats</div> 
     <br/>
     <div className="w3-large">New Visitors</div>
     
-    <div class="w3-grey">
-        <Visitors>
-        <div class="w3-container w3-center w3-padding w3-green" >+25%</div>
-        </Visitors>
-    </div>
-   
+    
+    <div className="progress" style={{ height: '40px', backgroundColor: '#ccc' }}>
+    <div
+      className="progress-bar bg-success"
+      role="progressbar"
+      style={{ width: '25%' }}
+      aria-label="Success example" 
+      aria-valuenow="25" 
+      aria-valuemin="0" 
+      aria-valuemax="100"
+     >
+    25%
+  </div>
+</div>
+
     <br/>
     <div className="w3-large">New Users</div>
     
-    <div class="w3-grey">
-        <Users>
-        <div class="w3-container w3-center w3-padding w3-orange" >50%</div>
-        </Users>
-    </div>
     
+    <div className="progress" style={{ height: '40px', backgroundColor: '#ccc' }}>
+    <div 
+      className="progress-bar bg-warning text-dar"
+      role="progressbar"
+      style={{ width: '50%' }}
+      >
+      50%
+      </div>
+</div>
+
     <br/>
     <div className="w3-large">Bounce Rate</div>
+        <div className="progress" style={{ height: '40px',backgroundColor: '#ccc' }}>
+        <div 
+          className="progress-bar bg-danger" 
+          role="progressbar"
+          style={{ width: '75%' }}
+          >75%</div>
+      </div>
+        
     
-    <div class="w3-grey">
-        <Bounce>
-        <div class="w3-container w3-center w3-padding w3-red">75%</div>
-        </Bounce>
-    </div>
     
     <br/><br/>
     <div className="w3-xlarge">Countries</div>
-    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-      <tbody><tr>
-        <td>United States</td>
-        <td>65%</td>
-      </tr>
-      <tr>
-        <td>UK</td>
-        <td>15.7%</td>
-      </tr>
-      <tr>
-        <td>Russia</td>
-        <td>5.6%</td>
-      </tr>
-      <tr>
-        <td>Spain</td>
-        <td>2.1%</td>
-      </tr>
-      <tr>
-        <td>India</td>
-        <td>1.9%</td>
-      </tr>
-      <tr>
-        <td>France</td>
-        <td>1.5%</td>
-      </tr>
-    </tbody></table>
+    <table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">United States</th>
+      <th scope="col"> </th>
+      <th scope="col">65%</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th scope="col">UK</th>
+      <th scope="col"> </th>
+      <th scope="col">15.7%</th>
+    </tr>
+    <tr>
+      <th scope="row">Russia</th>
+      <th scope="col"> </th>
+      <th scope="col">5.6%</th>
+    </tr>
+    <tr>
+    <th scope="row">Spain</th>
+      <th scope="col"> </th>
+      <th scope="col">2.1%</th>
+    </tr>
+    <tr>
+    <th scope="row">India</th>
+      <th scope="col"> </th>
+      <th scope="col">1.9%</th>
+    </tr>
+    <tr>
+    <th scope="row">France</th>
+      <th scope="col"> </th>
+      <th scope="col">1.5%</th>
+    </tr>
+  </tbody>
+</table>
     <br/><br/>
     <button class="w3-button w3-dark-grey">More Countries &nbsp;<i class="fa fa-arrow-right"></i></button>
     <br/><br/><br/>
@@ -289,7 +305,7 @@ const Dashboard = () => {
             </John>
             <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span>
             <p>
-            Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br/> incididunt ut labore et dolore magna aliqua.
             </p>
             </h4>
         </JohnContents>
@@ -304,7 +320,7 @@ const Dashboard = () => {
             </h4>
         </JohnContents>
         <div class="w3-container w3-dark-grey w3-padding-32">
-    <div class="w3-row">
+    <greyContainer>
       <div class="w3-container w3-third">
         <h5 class="w3-bottombar w3-border-green">Demographic</h5>
         <p>Language</p>
@@ -324,7 +340,7 @@ const Dashboard = () => {
         <p>Geo</p>
         <p>Interests</p>
       </div>
-    </div>
+    </greyContainer>
   </div>
   <footer class="w3-container w3-padding-16 w3-light-grey">
     <h4>FOOTER</h4>
