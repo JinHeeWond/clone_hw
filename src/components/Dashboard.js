@@ -159,7 +159,7 @@ const Dashboard = () => {
     </Regions>
     
     <Feeds>
-    <table className="table table-striped "  style={{ height: "400px" }}>
+    <table className="table table-striped "  style={{ height: "400px" , fontFamily: '"Raleway", sans-serif'}}>
       <tbody>
         <tr>
           <td><i className="fa fa-user w3-text-blue w3-large"></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;New record, over 90 views.</td>
@@ -215,7 +215,7 @@ const Dashboard = () => {
 
     <br/>
     <div className="w3-large">New Users</div>
-    <div className="progress" style={{ height: '40px', backgroundColor: '#ccc' }}>
+    <div className="progress" style={{ height: '40px', backgroundColor: '#ccc',fontFamily: '"Raleway", sans-serif' }}>
     <div 
       className="progress-bar bg-warning text-dar"
       role="progressbar"
@@ -236,7 +236,7 @@ const Dashboard = () => {
       </div> 
     <br/><br/>
     <div className="w3-xlarge">Countries</div>
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover" style={{fontFamily: '"Raleway", sans-serif'}}>
   <thead>
     <tr>
       <th scope="col">United States</th>
@@ -288,12 +288,12 @@ const Dashboard = () => {
         <br/><span class="w3-xlarge">Jane</span>
         </Whitebox>
         <br/><br/>
-        <div className="w3-xlarge">Recent Comments</div>
+        <div className="w3-xlarge"style={{fontFamily: '"Raleway", sans-serif'}}>Recent Comments</div>
         <JohnContents>
             <John>
                 <img class="w3-circle" src="https://www.w3schools.com/w3images/avatar3.png" style={{width:"96px",height:"96px", margin:"20px"}}></img>
             </John>
-            <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span>
+            <h4 >John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span>
             <p>
             Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br/> incididunt ut labore et dolore magna aliqua.
             </p>
